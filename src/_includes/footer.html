@@ -1,7 +1,4 @@
 <footer class="footer">
-<!--
-  <a class="footer_item" href="/thanks">سپاس</a>
--->
   {% if site.author.twitter %}
     <a class="footer item" href="https://twitter.com/{{ site.author.twitter }}">
         <i class="fab fa-twitter-square"></i>
@@ -29,34 +26,6 @@
 	تلگرام
     </a>
   {% endif %}
-  
-  {% if site.author.mastodon.first %}
-    <a class="footer item" href="{{ site.author.mastodon.first }}">
-        <i class="fab fa-mastodon"></i>
-	mastodon
-    </a>
-  {% endif %}
-
-  {% if site.author.mastodon.second %}
-    <a class="footer item" href="{{ site.author.mastodon.second }}">
-        <i class="fab fa-mastodon"></i>
-	ماستودون
-    </a>
-  {% endif %}
-
-  {% if site.author.lbry %}
-    <a class="footer item" href="{{ site.author.lbry }}">
-        <i class="fa  fa-video"></i>
-	لایبرری
-    </a>
-  {% endif %}
-
-  {% if site.author.pixelfed %}
-    <a class="footer item" href="{{ site.author.pixelfed }}">
-        <i class="fa  fa-camera"></i>
-	پیکسلفد
-    </a>
-  {% endif %}
       
   {% if site.author.email %}
     <a class="footer item" href="mailto:{{ site.author.email }}">
@@ -64,15 +33,10 @@
 	تماس
     </a>
   {% endif %}
-<!--
-  <a class="footer_item" href="javascript::void(0)">رزومه</a>
-  <span class="footer_item">&copy; {{ site.time | date: "%Y" }}</span>
--->
 
   <small class="footer_copyright">
    {% include license.html %}
-     
-    <!-- simorq Theme: https://github.com/mhdzli/simorq -->
+    <br>
     تم 
     <a
       href="https://github.com/mhdzli/simorq"
