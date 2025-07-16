@@ -19,14 +19,12 @@ author:
 
      سعی ما بر این هستش که هرآنچه مرتبط با امنیت بلاکچین و وب ۳ هستش رو در این سایت قرار بدیم
 
-  # username: persianweb3sec # general username
-  github: persianweb3sec # github username
-  discord: https://discord.gg/Gm8BaPeY
+  # username: persianweb3sec
+  github: persianweb3sec
+  discord: https://discord.gg/BDYpemXFCh
   telegram: https://t.me/+_BZiDHeqUfliN2M0
-  # twitter: persianweb3sec # twitter username
-  # you can add your accounts of other social media  but you need to edit footer.html in _includes directory and add other sosial media links based on existing  templates
-  # email: i@i.i # email adress
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+  # twitter: persianweb3sec
+  avatar: /assets/img/avatar.jpg
 
 # URL settings
 url: "https://example.anything" # your domain
