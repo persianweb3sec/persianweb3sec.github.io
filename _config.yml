@@ -1,0 +1,98 @@
+# Site settings
+
+source: src
+title: امنیت وب ۳ فارسی # site title
+description: انجمن امنیت وب ۳
+lang: fa # default lang
+date_format: fa-IR # fa-IR || en-US -- set to fa-IR for persian dates
+timezone: Asia/Tehran # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+mode: dark # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: امنیت وب ۳ به زبان فارسی # author name
+  bio: >- # tell to the world
+    سلام! به انجمن امنیت وب ۳ خوش اومدید
+  
+    <br>
+
+     سعی ما بر این هستش که هرآنچه مرتبط با امنیت بلاکچین و وب ۳ هستش رو در این سایت قرار بدیم
+
+  # username: persianweb3sec # general username
+  github: persianweb3sec # github username
+  discord: https://discord.gg/Gm8BaPeY
+  telegram: https://t.me/+_BZiDHeqUfliN2M0
+  # twitter: persianweb3sec # twitter username
+  # you can add your accounts of other social media  but you need to edit footer.html in _includes directory and add other sosial media links based on existing  templates
+  # email: i@i.i # email adress
+  avatar: /assets/img/avatar.jpg # change with your own avatar
+
+# URL settings
+url: "https://example.anything" # your domain
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
