@@ -39,8 +39,8 @@ image: ""
 
 برای یادگیری فاندری هم طبق معمول بهترین ریسورس هارو پاتریک کالینز تولید کرده:
 
-- [مبانی فاندری](https://updraft.cyfrin.io/courses/foundry)
-- [فاندری پیشرفته](https://updraft.cyfrin.io/courses/advanced-foundry)
+- [Foundry Fundamentals](https://updraft.cyfrin.io/courses/foundry)
+- [Advance Foundry](https://updraft.cyfrin.io/courses/advanced-foundry)
 
 و همینطور منبعی که خیلی لازمتون میشه حین کار با فاندری:
 
@@ -70,3 +70,6 @@ image: ""
 2. با طرز فکر یا Mindset آدیتور های حرفه ای آشنا میشید
 
 میتونم بگم این مهم ترین قدمی هستش که شما در فرآیند یادگیریتون بر میدارید.
+
+
+اگر سوالی داشتید میتونید توی [دیسکورد](https://discord.gg/gf5stdZ9Qa) و یا [گروه تلگرامی](https://t.me/+_BZiDHeqUfliN2M0) انجمن مطرح کنید تا بقیه کمکتون کنن ☺️
