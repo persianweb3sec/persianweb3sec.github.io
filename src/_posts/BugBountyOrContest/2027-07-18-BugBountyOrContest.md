@@ -113,4 +113,4 @@ image: ""
 
 ارادت
 
-[**ارتباط با من**](persianweb3sec@proton.me)
+[**ارتباط با من**](mailto:persianweb3sec@proton.me)
