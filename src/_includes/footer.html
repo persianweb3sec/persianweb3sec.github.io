@@ -6,6 +6,13 @@
     </a>
   {% endif %}
 
+  {% if site.author.email %}
+    <a class="footer item" href="mailto:{{ site.author.email }}">
+	<i class="fa fa-envelope-open"></i>
+	تماس با من
+    </a>
+  {% endif %}
+
   {% if site.author.github %}
     <a class="footer item" href="https://github.com/{{ site.author.github }}">
         <i class="fab fa-github"></i>
@@ -24,13 +31,6 @@
     <a class="footer item" href="{{ site.author.telegram }}">
         <i class="fab fa-telegram"></i>
 	تلگرام
-    </a>
-  {% endif %}
-      
-  {% if site.author.email %}
-    <a class="footer item" href="mailto:{{ site.author.email }}">
-	<i class="fa fa-envelope-open"></i>
-	تماس
     </a>
   {% endif %}
 
