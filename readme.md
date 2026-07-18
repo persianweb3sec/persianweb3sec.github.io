@@ -1,6 +1,4 @@
-# PersianWeb3Sec.com
-
-Github repo of [PersianWeb3Sec.com](https://persianweb3sec.com)
+# PersianWeb3Sec.github.io
 
 **The first persian reference for Web3 Security**
 
