@@ -2,8 +2,8 @@
 
 **The first persian reference for Web3 Security**
 
-- PersianWeb3Sec group on Telegram: [Link](https://t.me/+_BZiDHeqUfliN2M0)
-- PersianWeb3Sec on Discord: [Link](https://discord.gg/gf5stdZ9Qa)
+- Our Telegram Group: [Link](https://t.me/+_BZiDHeqUfliN2M0)
+- Our Discord: [Link](https://discord.gg/gf5stdZ9Qa)
 
 ## License
 
