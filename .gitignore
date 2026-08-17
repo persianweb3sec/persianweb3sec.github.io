@@ -1,0 +1,8 @@
+.bundle/
+vendor/
+_site/
+.jekyll-cache/
+src/.jekyll-cache/
+.sass-cache/
+FRONTEND_SKILLS.md
+.DS_Store
