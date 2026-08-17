@@ -1,57 +1,91 @@
 <footer class="footer">
-  {% if site.author.twitter %}
-    <a class="footer item" href="https://twitter.com/{{ site.author.twitter }}">
-        <i class="fab fa-twitter-square"></i>
-	توئیت‌ها
-    </a>
-  {% endif %}
+  <div class="contact">
+    <div class="contact-row">
+      <span class="contact-label" data-i18n="contact">تماس با من :</span>
+      <div class="contact-links">
+        {% if site.author.email %}
+          <a
+            class="contact-icon"
+            href="mailto:{{ site.author.email }}"
+            data-i18n="contact.email"
+            data-i18n-attr="aria-label"
+            aria-label="ایمیل"
+            title="ایمیل"
+          >
+            <img src="/assets/img/contact/email.png" alt="" width="40" height="40" />
+          </a>
+        {% endif %}
+      </div>
+    </div>
 
-  {% if site.author.email %}
-    <a class="footer item" href="mailto:{{ site.author.email }}">
-	<i class="fa fa-envelope-open"></i>
-	تماس با من
-    </a>
-  {% endif %}
+    <div class="contact-row">
+      <span class="contact-label" data-i18n="social">شبکه‌های اجتماعی :</span>
+      <div class="contact-links">
+        {% if site.author.discord %}
+          <a
+            class="contact-icon"
+            href="{{ site.author.discord }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contact.discord"
+            data-i18n-attr="aria-label"
+            aria-label="دیسکورد"
+            title="دیسکورد"
+          >
+            <img src="/assets/img/contact/discord.png" alt="" width="40" height="40" />
+          </a>
+        {% endif %}
 
-  {% if site.author.github %}
-    <a class="footer item" href="https://github.com/{{ site.author.github }}">
-        <i class="fab fa-github"></i>
-	گیت‌هاب
-    </a>
-  {% endif %}
+        {% if site.author.telegram %}
+          <a
+            class="contact-icon"
+            href="{{ site.author.telegram }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contact.telegram"
+            data-i18n-attr="aria-label"
+            aria-label="تلگرام"
+            title="تلگرام"
+          >
+            <img src="/assets/img/contact/telegram.png" alt="" width="40" height="40" />
+          </a>
+        {% endif %}
 
-  {% if site.author.github %}
-    <a class="footer item" href="{{ site.author.discord }}">
-        <i class="fab fa-discord"></i>
-	دیسکورد
-    </a>
-  {% endif %}
-
-  {% if site.author.github %}
-    <a class="footer item" href="{{ site.author.telegram }}">
-        <i class="fab fa-telegram"></i>
-	تلگرام
-    </a>
-  {% endif %}
+        {% if site.author.github %}
+          <a
+            class="contact-icon"
+            href="https://github.com/{{ site.author.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contact.github"
+            data-i18n-attr="aria-label"
+            aria-label="گیت‌هاب"
+            title="گیت‌هاب"
+          >
+            <img src="/assets/img/contact/github.png" alt="" width="40" height="40" />
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 
   <small class="footer_copyright">
    {% include license.html %}
     <br>
-    تم 
+    <span data-i18n="footer.theme">تم</span>
     <a
       href="https://github.com/mhdzli/simorq"
       target="_blank"
       rel="noreferrer noopener"
       >
-      سیمرغ 
+      سیمرغ
     </a>
-    نیرو گرفته از 
+    <span data-i18n="footer.powered">نیرو گرفته از</span>
     <a href="https://jekyllrb.com" target="_blank" rel="noreferrer noopener">
       jekyll
     </a>
-    
   </small>
 </footer>
-    
+
 
 {% include javascripts.html %}

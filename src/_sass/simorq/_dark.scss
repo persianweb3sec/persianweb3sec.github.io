@@ -124,7 +124,8 @@ body[data-theme="dark"] {
   .navbar {
     border-color: $dark-light;
     .menu {
-      a#mode {
+      a#mode,
+      .mode-toggle {
         .mode-sunny {
           display: block;
         }
@@ -242,6 +243,22 @@ body[data-theme="dark"] {
       &::-webkit-input-placeholder {
         color: rgba(128,128,128,0.8);
       }
+    }
+  }
+
+  .scroll-top {
+    background-color: $dark-light;
+    border-color: $dark-smoke;
+    color: $dark-white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+    &:hover,
+    &:focus {
+      color: $dark-text-link-blue;
+    }
+
+    &:focus-visible {
+      outline-color: $dark-text-link-blue;
     }
   }
 }

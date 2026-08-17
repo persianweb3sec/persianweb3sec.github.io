@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<html lang="{{ page.lang | default: site.lang | default: "fa" }}" dir="rtl">
 
 {% include header.html %}
 <body data-theme="{{ site.mode }}" class="notransition">
@@ -33,8 +33,8 @@ layout: compress
       <div class="not-found">
         <div class="container">
           <div class="title">404</div>
-          <p class="phrase">‼👻 به نظر میاد گم شدی ‼</p>
-          <a class="solution" href="{{ site.url }}">بریم خونه 🏡</a>
+          <p class="phrase" data-i18n="notfound.phrase">‼👻 به نظر میاد گم شدی ‼</p>
+          <a class="solution" href="/" data-i18n="notfound.home">بریم خونه 🏡</a>
         </div>
       </div>
     </main>  

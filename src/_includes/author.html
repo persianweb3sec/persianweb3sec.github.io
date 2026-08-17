@@ -1,9 +1,31 @@
-<div class="author">
+<section class="hero">
   <img
-    class="author-avatar"
+    class="hero-logo"
     src="{{ site.author.avatar }}"
-    alt="{{ site.author.username }}"
+    alt=""
+    width="96"
+    height="96"
   />
-  <h2 class="author-name">{{ site.author.name }}</h2>
-  <p class="author-bio">{{ site.author.bio }}</p>
-</div>
+  <h1 class="hero-title" data-i18n="hero.title">{{ site.author.name }}</h1>
+  <p class="hero-bio" data-i18n="hero.bio" data-i18n-html>{{ site.author.bio }}</p>
+  <div class="hero-actions">
+    {% if site.author.discord %}
+    <a class="btn btn-primary" href="{{ site.author.discord }}" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-discord" aria-hidden="true"></i>
+      <span data-i18n="action.discord">دیسکورد</span>
+    </a>
+    {% endif %}
+    {% if site.author.telegram %}
+    <a class="btn btn-ghost" href="{{ site.author.telegram }}" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+      <span data-i18n="action.telegram">تلگرام</span>
+    </a>
+    {% endif %}
+    {% if site.author.github %}
+    <a class="btn btn-ghost" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github" aria-hidden="true"></i>
+      <span data-i18n="action.github">گیت‌هاب</span>
+    </a>
+    {% endif %}
+  </div>
+</section>

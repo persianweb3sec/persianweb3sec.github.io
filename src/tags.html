@@ -1,30 +1,47 @@
 ---
 title: برچسب‌ها
+i18n_key: page.tags
 permalink: /tags/
 layout: page
 excerpt: Sorted article by tags.
 ---
 
 <div class="archive-tags">
-  <a class="tag-item" href="#">all</a>
-  {%- for tag in site.tags -%} 
+  <a class="tag-item" href="#all">
+    <i class="fas fa-tags" aria-hidden="true"></i>
+    <span data-i18n="tags.all">همه</span>
+    <span class="tag-count">{{ site.posts.size }}</span>
+  </a>
+  {%- for tag in site.tags -%}
     {% capture name %}{{ tag | first }}{% endcapture %}
-    <a class="tag-item" href="#{{name}}">{{ name }}</a> 
+    {% capture slug %}{{ name | slugify }}{% endcapture %}
+    <a class="tag-item" href="#{{ slug }}">
+      <span>{{ name }}</span>
+      <span class="tag-count">{{ site.tags[name].size }}</span>
+    </a>
   {%- endfor -%}
 </div>
 
+<div id="all" class="tag-groups">
 {%- for tag in site.tags -%}
   {%- capture name -%}{{ tag | first }}{%- endcapture -%}
-  <h2 id="{{ name }}">{{ name | upcase }}</h2>
-  {%- for post in site.tags[name] -%}
-    <article class="post-item" id="results-container">
-      <span class="post-item-date">
-        <i class="fa fa-calendar" style="color: #51d994;"></i>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %b، %Y" %}{{ post.date | date: date_format }}
-      </span>
-      <h4 class="post-item-title" style="padding-right: 8px;">
-        <a href="{{ post.url }}">{{ post.title | escape }}</a>
-      </h4> 
-    </article>
-  {%- endfor -%}
+  {%- capture slug -%}{{ name | slugify }}{%- endcapture -%}
+  <section class="tag-group">
+    <h2 class="tag-group-title" id="{{ slug }}">
+      {{ name }}
+      <span class="tag-count">{{ site.tags[name].size }}</span>
+    </h2>
+    {%- for post in site.tags[name] -%}
+      <article class="post-item">
+        <span class="post-item-date">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %b، %Y" %}{{ post.date | date: date_format }}</time>
+        </span>
+        <h4 class="post-item-title">
+          <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h4>
+      </article>
+    {%- endfor -%}
+  </section>
 {%- endfor -%}
+</div>

@@ -11,6 +11,14 @@
     {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
     site.title | escape }}{% endif %}
   </title>
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") === "en" ? "en" : "fa";
+      var html = document.documentElement;
+      html.setAttribute("lang", lang);
+      html.setAttribute("dir", lang === "en" ? "ltr" : "rtl");
+    })();
+  </script>
   <link
     rel="alternate"
     href="{{

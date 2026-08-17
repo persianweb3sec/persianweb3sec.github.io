@@ -1,10 +1,10 @@
 // Fonts preferences
 $sans-family: Vazirmatn, sans-serif;
-$mono-family: 'Comic Mono', monospace;
+$mono-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 $base-font-size: 16px;
 $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.85;
+$base-line-height: 1.8;
 
 // Font weight
 // $light-weight: 300; // uncomment if necessary
@@ -13,32 +13,32 @@ $bold-weight: 700;
 // $black-weight: 900; // uncomment if necessary
 
 //Light Colors
-$text-base-color: #434648;
-$text-link-blue: #003fff;
-$text-link-blue-active: #0036c7;
-$box: #c6f0e4;
+$text-base-color: #3d4a55;
+$text-link-blue: #0e8f7b;
+$text-link-blue-active: #0b6f61;
+$box: #d7f5ee;
 
-$black: #0d122b;
-$light: #ececec;
-$smoke: #d2c7c7;
-$gray: #6b7886;
-$white: #fff;
+$black: #0f1724;
+$light: #e8eef2;
+$smoke: #c5d0d6;
+$gray: #64748b;
+$white: #f6f8fa;
 
 // Dark Colors
-$dark-text-base-color: #c7bebe;
-$dark-text-link-blue: #ff5277;
-$dark-text-link-blue-active: #ff2957;
-$dark-box: #303030;
+$dark-text-base-color: #c5d0db;
+$dark-text-link-blue: #3ee0c2;
+$dark-text-link-blue-active: #7af0d8;
+$dark-box: #12202c;
 
-$dark-black: #131418;
-$dark-white: #eaeaea;
-$dark-light: #1b1d25;
-$dark-smoke: #4a4d56;
-$dark-gray: #767f87;
+$dark-black: #071018;
+$dark-white: #f2f7fb;
+$dark-light: #101a24;
+$dark-smoke: #2a3a48;
+$dark-gray: #8b9aab;
 
 // Width of the content area
-$wide-size: 890px;
-$narrow-size: 720px;
+$wide-size: 1120px;
+$narrow-size: 840px;
 
 // Padding unit
 $spacing-full: 30px;
@@ -62,4 +62,4 @@ $on-widescreen: 1152px;
 
 // Import sass files
 @import "simorq/fonts", "simorq/fontawesome", "simorq/base", "simorq/layout", "simorq/post",
-  "simorq/miscellaneous", "simorq/syntax", "simorq/dark", "simorq/rtl";
+  "simorq/miscellaneous", "simorq/syntax", "simorq/dark", "simorq/rtl", "simorq/modern";

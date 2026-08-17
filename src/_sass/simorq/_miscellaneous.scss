@@ -39,3 +39,59 @@
     position: absolute;
   }
 }
+
+// Smooth scroll-to-top button
+.scroll-top {
+  position: fixed;
+  z-index: 10;
+  bottom: $spacing-full;
+  inset-inline-end: $spacing-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid $light;
+  border-radius: 50%;
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 4px 16px rgba(13, 18, 43, 0.12);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease,
+    background-color 75ms ease-in, border-color 75ms ease-in, color 75ms ease-in;
+
+  &:hover,
+  &:focus {
+    color: $text-link-blue;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $text-link-blue;
+    outline-offset: 3px;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  @include media-query($on-mobile) {
+    bottom: $spacing-half;
+    inset-inline-end: $spacing-half;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transition: none;
+    transform: none;
+  }
+}

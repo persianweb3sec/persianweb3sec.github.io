@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "fa" }}" dir="rtl">
 
 {% include header.html %}
 
@@ -37,14 +37,15 @@ layout: compress
           {% if page.tags and page.tags != empty %}
           <div class="tags">
             {% assign tags = page.tags %}
-            <span itemprop="keywords">
+            <span class="chip-row" itemprop="keywords">
               {% for tag in tags %}
               <a class="tag"
-                href="/tags/#{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %},{% endunless %}
+                href="/tags/#{{tag | downcase | slugify}}">{{tag }}</a>
               {% endfor %}
             </span>
           </div>
           {% endif %}
+          <p class="lang-notice" data-i18n="post.persian_notice" hidden></p>
           <h1 class="header-title" itemprop="headline">{{ page.title | escape }}</h1>
           {% if page.date %}
           <div class="post-meta">
@@ -59,7 +60,7 @@ layout: compress
                 <time class="date-modify" datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
                   {% assign date_format = site.minima.date_format | default: "%d %b، %Y" %}{{ page.modified | date: date_format }}
                 </time>
-                به روز شد.
+                <span data-i18n="post.updated">به روز شد.</span>
             </div>
             {% endif %}
             <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>

@@ -1,20 +1,23 @@
-- title: <i class="fa fa-home"> <span class="fa-icon-text"> خانه</span> </i>
+- key: nav.home
+  title: خانه
   url: /
+  icon: fa fa-home
   external: false
 
-- title: <i class="fa fa-archive"> <span class="fa-icon-text"> بایگانی</span> </i>
+- key: nav.archive
+  title: بایگانی
   url: /archive/
+  icon: fa fa-archive
   external: false
 
-- title: <i class="fa fa-tag">  <span class="fa-icon-text"> برچسب‌ها</span> </i>
+- key: nav.tags
+  title: برچسب‌ها
   url: /tags/
+  icon: fa fa-tag
   external: false
 
-- title: <i class="fa fa-address-card">  <span class="fa-icon-text"> درباره</span> </i>
+- key: nav.about
+  title: درباره
   url: /about/
-  external: false # set true if you using external link, see below
-
-# Example:
-# - title: github
-#   url: https://github.com/mhdzli/simorq
-#   external: true
+  icon: fa fa-address-card
+  external: false

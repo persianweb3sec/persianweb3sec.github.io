@@ -3,18 +3,30 @@ layout: default
 home: true
 ---
 
-<h3 class="posts-item-note" aria-label="Recent Posts">
-	نوشته‌های تازه
-</h3>
-{%- for post in site.posts limit: site.number_of_posts -%}
-<article class="post-item">
-  <span class="post-item-date">
-    <i class="fa fa-calendar" style="color: #51d994;"></i>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %b، %Y" %}{{ post.date | date: date_format }}
-  </span>
-  <h4 class="post-item-title" style="padding-right: 8px;">
-    <a href="{{ post.url }}">{{ post.title | escape }}</a>
-  </h4>
-</article>
-{%- endfor -%}
-
+<section class="posts">
+  <h2 class="posts-item-note" aria-label="Recent Posts" data-i18n="posts.recent">نوشته‌های تازه</h2>
+  <div class="post-grid">
+    {%- for post in site.posts limit: site.number_of_posts -%}
+    <article class="post-card">
+      {% if post.tags and post.tags != empty %}
+      <div class="chip-row">
+        {%- for tag in post.tags limit: 3 -%}
+        <a class="chip" href="/tags/#{{ tag | downcase | slugify }}">{{ tag }}</a>
+        {%- endfor -%}
+      </div>
+      {% endif %}
+      <h3 class="post-card-title">
+        <a href="{{ post.url }}">{{ post.title | escape }}</a>
+      </h3>
+      {% assign summary = post.description | default: post.excerpt %}
+      {% if summary %}
+      <p class="post-card-excerpt">{{ summary | strip_html | truncate: 160 }}</p>
+      {% endif %}
+      <span class="post-card-meta">
+        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %b، %Y" %}{{ post.date | date: date_format }}</time>
+      </span>
+    </article>
+    {%- endfor -%}
+  </div>
+</section>
