@@ -336,6 +336,13 @@ ul li::before {
   }
 }
 
+.author {
+  @include media-query($on-mobile) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .hero-logo {
   display: block;
   width: 96px;
