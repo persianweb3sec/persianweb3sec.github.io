@@ -2,10 +2,8 @@
   const prefersReducedMotion = () =>
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const getLang = () => (localStorage.getItem("lang") === "en" ? "en" : "fa");
-
-  const applyDates = (lang) => {
-    const locale = lang === "en" ? "en-US" : "fa-IR";
+  const applyDates = () => {
+    const locale = "fa-IR";
     const postDates = document.getElementsByTagName("time");
 
     for (const date of postDates) {
@@ -22,21 +20,21 @@
 
     const archiveDates = document.getElementsByClassName("archive-date");
     for (const date of archiveDates) {
-      const year = date.getAttribute("data-year") || date.textContent;
+      const year = (date.getAttribute("data-year") || date.textContent).trim();
       date.setAttribute("data-year", year);
-      date.textContent = new Date(`${year}-01-01`).toLocaleString(locale, {
-        year: "numeric",
-      });
+      const parsed = new Date(`${year}-01-01`);
+      if (!isNaN(parsed.getTime())) {
+        date.textContent = parsed.toLocaleString(locale, {
+          year: "numeric",
+        });
+      } else {
+        date.textContent = year;
+      }
     }
   };
 
-  const applyLanguage = (lang) => {
-    const dict = (window.SITE_I18N && window.SITE_I18N[lang]) || {};
-    const html = document.documentElement;
-
-    html.setAttribute("lang", lang);
-    html.setAttribute("dir", lang === "en" ? "ltr" : "rtl");
-    localStorage.setItem("lang", lang);
+  const applyTranslations = () => {
+    const dict = (window.SITE_I18N && window.SITE_I18N["fa"]) || {};
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
@@ -70,28 +68,7 @@
       el.textContent = value;
     });
 
-    const licenseLink = document.querySelector("#license a[rel='license']");
-    if (licenseLink) {
-      licenseLink.href =
-        lang === "en"
-          ? "http://creativecommons.org/licenses/by/4.0/deed.en"
-          : "http://creativecommons.org/licenses/by/4.0/deed.fa";
-    }
-
-    applyDates(lang);
-  };
-
-  const initLanguageToggle = () => {
-    const toggle = document.getElementById("lang-toggle");
-    applyLanguage(getLang());
-
-    if (!toggle) {
-      return;
-    }
-
-    toggle.addEventListener("click", () => {
-      applyLanguage(getLang() === "en" ? "fa" : "en");
-    });
+    applyDates();
   };
 
   const initThemeToggle = () => {
@@ -139,8 +116,6 @@
     button.id = "scroll-top";
     button.type = "button";
     button.className = "scroll-top";
-    button.setAttribute("data-i18n", "scroll.top");
-    button.setAttribute("data-i18n-attr", "aria-label");
     button.setAttribute("aria-label", "بازگشت به بالا");
     button.innerHTML = '<i class="fas fa-chevron-up" aria-hidden="true"></i>';
     document.body.appendChild(button);
@@ -169,8 +144,8 @@
     toggleVisibility();
   };
 
+  applyTranslations();
   initThemeToggle();
   initMenuBlur();
   initScrollTopButton();
-  initLanguageToggle();
 })();

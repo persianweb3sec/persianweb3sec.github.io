@@ -6,8 +6,8 @@ fa:
   nav.about: درباره
   nav.rss: خوراک RSS
   theme.toggle: تغییر تم
-  lang.short: EN
-  lang.aria: Switch to English
+  lang.short: FA
+  lang.aria: تغییر زبان
   hero.kicker: انجمن امنیت وب ۳
   hero.title: امنیت وب ۳ به زبان فارسی
   hero.bio: سلام! به انجمن امنیت وب ۳ خوش اومدید<br>سعی ما بر این هستش که هرآنچه مرتبط با امنیت بلاکچین و وب ۳ هستش رو در این سایت قرار بدیم
@@ -15,7 +15,7 @@ fa:
   action.telegram: تلگرام
   action.github: گیت‌هاب
   posts.recent: نوشته‌های تازه
-  contact: "تماس با من :"
+  contact: "تماس با ما :"
   contact.email: ایمیل
   contact.github: گیت‌هاب
   contact.discord: دیسکورد
@@ -42,46 +42,4 @@ fa:
   scroll.top: بازگشت به بالا
   tags.all: همه
 
-en:
-  brand: Persian Web3 Security
-  nav.home: Home
-  nav.archive: Archive
-  nav.tags: Tags
-  nav.about: About
-  nav.rss: RSS feed
-  theme.toggle: Toggle theme
-  lang.short: فا
-  lang.aria: Switch to Persian
-  hero.kicker: Web3 Security Community
-  hero.title: Persian Web3 Security
-  hero.bio: Welcome to the Persian Web3 Security community.<br>We share everything related to blockchain and Web3 security.
-  action.discord: Discord
-  action.telegram: Telegram
-  action.github: GitHub
-  posts.recent: Latest posts
-  contact: "Contact me:"
-  contact.email: Email
-  contact.github: GitHub
-  contact.discord: Discord
-  contact.telegram: Telegram
-  social: "Social:"
-  license.before: Content on this site is licensed under
-  license.name: Creative Commons Attribution 4.0 International
-  license.after: "."
-  footer.theme: Theme
-  footer.powered: powered by
-  page.archive: Archive
-  page.tags: Tags
-  page.about: Persian Web3 Security
-  about.title: About us
-  about.body: Persian Web3 Security is a community of Persian-speaking blockchain security specialists, built for connection, knowledge sharing, and helping each other grow.
-  about.social: Social
-  search.placeholder: Search
-  post.updated: Updated
-  post.older: Older
-  post.newer: Newer
-  post.persian_notice: This article is written in Persian.
-  notfound.phrase: Looks like you got lost
-  notfound.home: Back home
-  scroll.top: Back to top
-  tags.all: All
+
