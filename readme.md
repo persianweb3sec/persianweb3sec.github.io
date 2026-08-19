@@ -1,4 +1,4 @@
-# sec3.ir
+# Sec3.ir
 
 **The first Persian reference for Web3 Security**
 
@@ -113,13 +113,9 @@ Visit `http://localhost:4000` to preview.
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Credits
-
-This project uses the [Simorq](https://github.com/mhdzli/simorq) theme by [Mohammad Zeinali](https://github.com/mhdzli). We appreciate his contributions to the open-source community!
-
 ### Contributors
 
-Thanks to all contributors who have helped improve this project:
+Thanks to all contributors who have helped improve Sec3.ir:
 
 - [@ely67](https://github.com/ely67) - Frontend redesign, modern layout, and contact icons
 
