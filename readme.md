@@ -1,4 +1,4 @@
-# PersianWeb3Sec.github.io
+# sec3.ir
 
 **The first Persian reference for Web3 Security**
 
